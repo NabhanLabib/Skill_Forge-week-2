@@ -9,9 +9,9 @@ $databaseName = 'latihan_week_2';
 $connection = mysqli_connect($host, $userSql, $password, $databaseName);
 //check connection
 
-if ($connection->connect()){
-    echo "Berhasil terhubung";
-
-}else{
-    echo "gagal terhubung";
+if (mysqli_connect_errno())
+{
+    echo "Failed to connnect to MySQL:" . mysqli_connect_error();
+    exit();
 }
+
